@@ -1,0 +1,106 @@
+% !TEX TS-program = pdflatex
+\documentclass[preprint,showpacs,aps,prc,superscriptaddress]{revtex4-1}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{lineno}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{epstopdf}
+\usepackage{natbib}
+\usepackage{subfigure}
+%\usepackage{tocloft}
+%\setlength{\cftpartnumwidth}{3em}
+%\def\l@section{\@dottedtocline{1}{2em}{2em}}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+%arabic 阿拉伯数字 
+%roman 小写的罗马数字 
+%Roman 大写的罗马数字 
+%alph 小写字母 
+%Alph 大写字母
+\hypersetup
+{
+    CJKbookmarks=true,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    plainpages=false,
+    pdfstartview=FitH
+}
+\newcommand{\snn}{\sqrt{s_\text{NN}}}
+\newcommand{\pt}{p_T}
+\newcommand{\gc}{GeV/$c$\ }
+\newcommand{\bv}[1]{\textbf{\emph{{}#1}}}
+\newcommand{\ffps}[1]{E_{{}#1}\frac{d^3\bv{N}_{{}#1}}{d\bv{p}^3_{{}#1}}}
+\newcommand{\sfps}[1]{\frac{d^6\bv{N}_{{}#1}}{d\bv{r}^3_{{}#1}d\bv{p}^3_{{}#1}}}
+\newcommand{\tfps}[1]{\frac{d^3\bv{N}_{{}#1}}{d\bv{p}^3_{{}#1}}}
+\newcommand{\npart}{\langle N_{\textrm{part}}\rangle}
+
+\begin{document}
+\preprint{}
+
+\title{
+\Huge{Analysis Note: \\ \textbf{Identified particle flow measurements in Au+Au collisions at $\sqrt{s_{NN}}$ = 3 GeV from RHIC-STAR}}
+}
+%\author{Shaowei Lan}
+\email[]{shaoweilan@mails.ccnu.edu.cn}
+%\affiliation{Key Laboratory of Quark $\&$ Lepton Physics (MOE) and Institute of Particle Physics, Central China Normal University, Wuhan, 430079, China}
+%\date{\today \ \ \ Version 1.0}
+
+
+\begin{abstract}
+
+\noindent\rule[0.25\baselineskip]{\textwidth}{1pt}
+Collectivity is a powerful tool for understanding the properties of the medium created in high-energy nucleai collisions. In this note we report the rapidity(y) dependence of azimuthally anisotropic parameters ($\rm v_{1}$ and $\rm v_{2}$) for identified hadrons ($\pi^{\pm}, K^{\pm}, K_{S}^{0}, p, \phi, \Lambda$) from Au+Au collisions at a center-of-mass-energy per nuclean pair ($\sqrt{s_{NN}}$) of 3 GeV. These results are compared with that from high collision energy $\sqrt{s_{NN}}$ $>$ 4.5 GeV. It is found that at this energy in the 10-40\% mid-central collisions (1) the midrapidity slopes $dv_{1}/dy|_{y=0}$ for all hadrons are positive except pions; (2) the midrapidity elliptic flow $v_{2}$ are all negative and the number of consistent quark scaling, observed in high energy collision is absent. These observations imply new medium properties produced that are different from the partonic matter created in high energy collisions.
+%\noindent\rule[0.25\baselineskip]{\textwidth}{1pt}
+\end{abstract}
+
+\maketitle
+\listoffigures
+\listoftables
+\tableofcontents
+%\makeatletter
+%\let\toc@pre\relax
+%\let\toc@post\relax
+%\makeatother
+
+\newpage
+
+
+\linenumbers
+\input{chapter1/chapter1}%Introduction
+\clearpage
+\input{chapter2/chapter2}%Analysis detail
+\clearpage
+\input{chapter3/chapter3}%Results
+\clearpage
+\input{chapter4/chapter4}%Analysis Techniques
+\clearpage
+\input{chapterX/chapterX}%Lambda, K_S
+\clearpage
+
+\bibliography{bib}
+%\end{thebibliography}
+
+\clearpage
+
+%\appendix
+%\input{Appendix/A}
+
+%\bibliographystyle{plain}
+
+%\bibliographystyle{plain}
+
+
+
+
+\end{document}
