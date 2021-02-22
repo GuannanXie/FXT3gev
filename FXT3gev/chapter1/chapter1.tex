@@ -27,11 +27,14 @@ Figure \ref{fig:FXT_schematic} shows the schematic plot for fixed target collisi
 \subsection{Datasets and Event Selection cuts}
 In this study, we analyze the minimum bias events for Au + Au collisions at $\sqrt{s_{NN}}$ = 3 GeV from Fixed target mode, single beam energy is 3.85 GeV. The trigger information and event selection are summarized in the  TABLE \ref{table1}. Since the target is fixed, in our analysis we set the vertex cut along the Z direction is [198, 202] cm, in the X and Y direction, we set the Vr ($\sqrt{Vx^{2}+Vy^{2}}$) less than 2 cm around (0, -2). The total number of minimum bias events is 310 million, and after event cuts (Vz and Vr cut), we still have 280 million good events.
 
+STAR has reproduced the PicoDst data in October 2020. New production has two major changes: 1, Z vertex required to be with target [198, 202] cm, 2, startless T0 using bToF added protons (previously just pions).
+
+
 \begin{table}[h]
 \centering
 \caption{\ Event cuts and total number of minimum bias events}
 \label{table1}
-\begin{tabular}{l l l l l l l}
+\begin{tabular}{cccccc}
 %\begin{tabular}
 	\hline
 \small{\textbf{Energy($\sqrt{s_{NN}}$ GeV)}} & \small{\textbf{Trigger ID (minimum bias)}} & \textbf{Vz(cm)} & \textbf{Vr((0,-2) cm)} & \textbf{Total Events(M))} & \textbf{Good Events(M)}\\
@@ -41,39 +44,7 @@ In this study, we analyze the minimum bias events for Au + Au collisions at $\sq
 \end{table}
  
 \subsection{Badrun selection}
-Due to the detector performance during the data taking, we need to select the bad runs, which might influence our analysis and results. In our analysis, 7 event and track variables (Vz, Vr, refmult, dca, eta, phi, pt) will be used to select bad runs. With event (Vz and Vr) cut,  we plot each variable's mean value as a function of run index in the figure \ref{fig:bad}, totally there are 191 runs at 3GeV. After applying the event cuts (198 $<$ Vz $<$ 202 cm and Vr $<$2 cm), and we plot these variable' mean value as a function of run index, the run index is corresponding to each run number. The second step, we perform minimum and maximum cut (the blue dash line) for each variable to exclude the extreme data(they are far away from the rest of data point). The third step, we calculate the mean value (red solid line) and 3$\sigma$ (red dash line) of the rest data. After that, we can select the bad runs, which are outside the 3$\sigma$ region. totally we have 21 bad runs, these runs will be removed in this analysis.
-	
-
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.9]{chapter1/fig/badruns.pdf}
-\caption{ These variables' (Vz, Vr, refmult, dca, eta, phi, pt) mean value as a function of run index.}
-\label{fig:bad}
-\end{figure}
-
-From this selection and possible reasons based on shift log in the TABLE \ref{badruns}. The relevant reference could be found at \href{https://drupal.star.bnl.gov/STAR/system/files/Good_run_list_3.85_1.pdf}{Badruns}
-
-\begin{table}[h]
-\centering
-\caption{\ Bad runs list and what's wrong}
-\label{badruns}
-\begin{tabular}{cc}
-\hline
-Bad runs & What's wrong with this run? \\
-\hline
-\textbf{19151029} & First data run. Fill was with 36 bunches, not 12. \\
-\textbf{19152001} & Run has only 1 event.  \\
-\textbf{19152078} & 1 minute run, not in the shift log book. \\
-\textbf{19153023} & 3.5 minute run, get almost no rate, asked MCR, then TPC trips. \\
-\textbf{19153032} & 35 second run, run stopped with TPC trips. \\
-\textbf{19153065} & 35 second run, run stopped with two inner TPC trips. \\
-\textbf{19154012-19154024} & TPC sector 14 has four RDOs missing. \\
-\textbf{19154026} & BTOW is out for this run. \\
-\textbf{19154051} & 45 second run, inner TPC tripped during the run. \\
-\hline
-\end{tabular}
-\end{table}
-
+Due to the detector performance during the data taking, one need to select the bad runs, which might influence our analysis and results. In this analysis, the badruns list study can be found at this link: \url{https://drupal.star.bnl.gov/STAR/system/files/Kimelman_3GeV_run_by_run_QA_badRuns.pdf},  which is also the STAR official study at 3 GeV. These badruns have been listed and the reason for each run is also shown based on the shift log.
 
 \subsection{Centrality Determination}
 
@@ -108,26 +79,27 @@ We also study the trigger efficiency using URQMD model, in which these event are
     \hline
         centrality & Refmult cut ($>$) \\
         \hline
-        0-5\% &  133 \\ 
-        5-10\% & 110 \\
-        10-15\% & 92 \\
-        15-20\% & 76 \\
-        20-25\% & 63 \\
-        25-30\% & 51 \\
-        30-35\% & 42 \\
-        35-40\% & 34 \\ 
-        40-45\% & 27 \\
-        45-50\% & 21 \\
-        50-55\% & 16 \\
-        55-60\% & 12 \\
-        60-65\% & 9 \\
-        65-70\% & 6 \\
-        70-75\% & 4 \\
-        75-80\% & 3 \\
+        0-5\%   &  142 \\ 
+        5-10\%  & 119 \\
+        10-15\% & 101 \\
+        15-20\% & 86 \\
+        20-25\% & 72 \\
+        25-30\% & 60 \\
+        30-35\% & 50 \\
+        35-40\% & 41 \\ 
+        40-45\% & 33 \\
+        45-50\% & 26 \\
+        50-55\% & 21 \\
+        55-60\% & 16 \\
+        60-65\% & 12 \\
+        65-70\% & 9 \\
+        70-75\% & 7 \\
+        75-80\% & 5 \\
         \hline
     \end{tabular}
     \caption{Refmult cut for centrality definition}
     \label{tab:cent_def}
 \end{table}
 
+This centrality definition study will be the STAR official centrality definition at 3 GeV. The detailed study can be found at this link: \url{https://drupal.star.bnl.gov/STAR/system/files/Sweger_3p0GeV_StandardNewest_fcv2020Nov11.pdf}
 

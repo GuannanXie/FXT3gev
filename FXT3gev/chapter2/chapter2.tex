@@ -219,7 +219,7 @@ It's similar way to determine the other sub-event resolution. In this analysis, 
 
 
 
-\subsection{Particle Identification}
+\subsection{$\pi$, $K$, $p$ Particle Identification}
 \subsubsection{PID from TPC and TOF}
 In this analysis, we use TPC and TOF detectors to identify particles (pion, kaon, and proton). Figure \ref{fig:dedx_mass2_3gev}, the left side, shows the TPC energy loss $dE/dx$ as a function of rigidity ($p/q$) with quality cuts. The curves for different color indicate the Bichsel expectation values for corresponding particles. As we can see, the TPC can identify particles at low momentum as illustrated by the color bands. At high momentum region, we need to identify particles together with TOF information. Figure \ref{fig:dedx_mass2_3gev}, the right side, shows the measured mass square as a function of rigidity ($p/q$) with track quality cuts. 
 
@@ -244,9 +244,9 @@ The variable mass square ($m^{2}$) from TOF is given by:
 where the p is the momentum, T is the time of travel by particle, L is the path length, and c is the speed of light.
 
 \subsubsection{Acceptance of pion, kaon and proton}
-In order to avoid fake tracks in the TPC and to improve the average momentum and energy loss resolution, the following track quality cuts in the table \ref{tab:tpc_cut_pid} were applied, then for the identification of pion, kaon and proton, we require TPC $n\sigma$ and TOF $mass^{2}$ cuts in the table \ref{tab:dedx_mass_cut_pid}. For pions and kaons, in addition of TPC $n_{\sigma}$ cut, we also apply TOF $m^{2}$ cut to improve their purity. For proton, since at 3GeV, the proton production will be dominated. So we only apply TPC $n_{\sigma}$ cut. Its purity is $>$ 90\% when the momentum $<$ 2GeV. After these cuts, these particles acceptance plot ($\pi^{\pm}, K^{\pm}$, p ) can be found in the figure \ref{fig:pikp_acceptance_fig}, we also label the target location at $y = -1.045$, as we can see, the acceptance for all particles cover midrapidity region, so that we can make a fair comparison with STAR high energy results.
+In order to avoid fake tracks in the TPC and to improve the average momentum and energy loss resolution, the following track quality cuts in the table \ref{tab:tpc_cut_pid} were applied, then for the identification of pion, kaon and proton, we require TPC $n\sigma$ and TOF $mass^{2}$ cuts in the table \ref{tab:dedx_mass_cut_pid}. For pions and kaons, in addition of TPC $n_{\sigma}$ cut, we also apply TOF $m^{2}$ cut to improve their purity. For proton, since at 3GeV, the proton production will be dominated. So we only apply TPC $n_{\sigma}$ cut. Its purity is $>$ 95\% when the momentum $<$ 2 GeV, one can find the proton purity in different $p_{T}$ range in Fig. ~\cite{fig_proton_purity}. After these cuts, these particles acceptance plot ($\pi^{\pm}, K^{\pm}$, p ) can be found in the figure \ref{fig:pikp_acceptance_fig}, we also label the target location at $y = -1.045$, as we can see, the acceptance for all particles cover midrapidity region, so that we can make a fair comparison with STAR high energy results.
  
- \begin{table}[ht]
+ \begin{table}[!ht]
 \caption{\ TPC global tracks cuts for PID}
 \label{tab:tpc_cut_pid}
 \begin{tabular}{|c|c|}
@@ -266,12 +266,19 @@ dca $<$ 3 (cm) \\ \hline
 particle & cuts \\ \hline
 pion  &  $|n\sigma_{\pi}|$ $<$ 3 and -0.1$<mass^{2}<$0.15 \\  \hline
 kaon & $|n\sigma_{kaon}|$ $<$ 3 and 0.16$<mass^{2}<$0.36 \\ \hline
-proton & $|n\sigma_{proton}|$ $<$ 2 \\ \hline
+proton & $|n\sigma_{proton}|$ $<$ 2 when p$<$2.0GeV/c, $|n\sigma_{proton}|$ $<$ 2 and 0.6$<mass^{2}<$1.2 when p$>$2.0GeV/c  \\ \hline
 \end{tabular}
 \end{table}
 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.7]{FXT3gev/chapter2/fig/proton_purity.pdf}
+    \caption{proton purity in different $p_T$ region (0.3-2.0 GeV)}
+    \label{fig:proton_purity}
+\end{figure}
+
 \begin{figure}[ht]
-\includegraphics [scale=0.5]{chapter2/fig/pikp_acc_3gev.png}
+\includegraphics [scale=0.4]{chapter2/fig/pikp_acc_3gev.png}
 \caption{ Rapidity(y) and transverse momentum($p_{T}$) acceptance of $\pi^{\pm}, K^{\pm}, proton$ using TPC and TOF in Au+Au collisions at $\sqrt{s_{NN}}$ = 3 GeV. The target is located at the y = -1.045. }
 \label{fig:pikp_acceptance_fig}
 \end{figure}

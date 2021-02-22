@@ -77,6 +77,26 @@ In this analysis at 3GeV, we present $\pi^{\pm}, K^{\pm}, K^{0}_{S}, proton, \La
     \label{fig:v1_energy}
 \end{figure}
 
+\subsection{Combination Results}
+
+In this analysis, the $v_1$ results between positive and negative particle are combined for both pions and kaons, as the difference among them are very small. 
+The method for combining these results are listed below: firstly the weight factor is calculated by the inverse of statistics error square. Then we combined results and error are calculated by weighting the weight factor, the similar way for kaons analysis.
+
+\begin{equation}
+    w (\pi^{+}) = \frac{1}{error_{stat}(\pi^{+})} \qquad
+    w (\pi^{-}) = \frac{1}{error_{stat}(\pi^{-})}
+\end{equation}
+
+\begin{equation}
+    v_{1}(\pi) = \frac{v_{1}(\pi^{+})*w(\pi^{+}) + v_{1}(\pi^{-})*w(\pi^{-})}{w(\pi^{+})+w(\pi^{-})}
+\end{equation}
+\begin{equation}
+    error_{stat}(\pi) = \sqrt{1/(w(\pi^{+})+w(\pi^{-}))}
+\end{equation}
+\begin{equation}
+    error_{sys}(\pi) = \frac{error_{sys}(\pi^{+})*w(\pi^{+}) + error_{sys}(\pi^{-})*w(\pi^{-})}{w(\pi^{+})+w(\pi^{-})}
+\end{equation}
+
 
 
 
